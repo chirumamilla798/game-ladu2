@@ -149,18 +149,5 @@ document.addEventListener("touchstart", (event) => {
     shootBullet();
   }
 });
-function endGame() {
-  clearInterval(gameInterval);
-  clearInterval(targetInterval);
-  alert(`Game Over! Your score is ${score}`);
-  
-  // Instead of reloading, restart properly
-  score = 0;
-  scoreDisplay.textContent = `Score: ${score}`;
-  timeLeft = 60;
-  startGame();
-}
-
-
 
 startGame();

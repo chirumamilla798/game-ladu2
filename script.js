@@ -144,6 +144,12 @@ document.getElementById("rightBtn").addEventListener("click", () => {
 document.getElementById("shootBtn").addEventListener("click", () => {
   shootBullet();
 });
+document.addEventListener("touchstart", (event) => {
+  if (event.touches.length === 1) {
+    shootBullet();
+  }
+});
+
 
 
 startGame();
